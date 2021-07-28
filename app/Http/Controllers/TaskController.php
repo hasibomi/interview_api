@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Task;
 use App\Http\Requests\TaskRequest;
+use App\Http\Requests\TaskUpdateRequest;
 
 class TaskController extends Controller
 {
@@ -29,7 +30,7 @@ class TaskController extends Controller
         return response()->json(Task::find($id));
     }
 
-    public function update($id, TaskRequest $request)
+    public function update($id, TaskUpdateRequest $request)
     {
         $task = Task::find($id);
 
