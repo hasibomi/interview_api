@@ -33,7 +33,6 @@ class TaskController extends Controller
     {
         $task = Task::find($id);
 
-        $task->name = $request->name;
         $task->is_done = $request->is_done;
 
         $task->save();
